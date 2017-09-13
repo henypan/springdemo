@@ -1,0 +1,7 @@
+.idea/
+lib/
+musicstore.iml
+out/
+target/
+*.class
+pom.xml
