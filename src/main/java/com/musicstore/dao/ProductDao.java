@@ -15,8 +15,19 @@ public class ProductDao {
         product1.setProductDescription("This is a description data");
         product1.setProductPrice(1000);
         product1.setUnitInStock(20);
+        product1.setProductCondition("New");
+
+        Product product2 = new Product();
+        product2.setProductName("Ring");
+        product2.setProductCategory("Instrument");
+        product2.setProductDescription("This is a description ring");
+        product2.setProductPrice(400);
+        product2.setUnitInStock(10);
+        product2.setProductCondition("New");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
+        productList.add(product2);
         return productList;
     }
 }
