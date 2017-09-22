@@ -2,6 +2,7 @@ package com.musicstore.controller;
 
 import com.musicstore.dao.ProductDao;
 import com.musicstore.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,8 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    ProductDao productDao = new ProductDao();
+    @Autowired
+    private ProductDao productDao;
 
     @RequestMapping("/")
     public String home() {
@@ -22,7 +24,7 @@ public class HomeController {
     @RequestMapping("/productList")
     public String getProductList(Model model) {
 
-        List<Product> products = productDao.getProductList();
+        List<Product> products = productDao.getAllProduct();
         model.addAttribute("products",products);
         return "productList";
     }
