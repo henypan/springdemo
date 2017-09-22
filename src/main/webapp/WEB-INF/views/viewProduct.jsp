@@ -27,10 +27,12 @@
                     <img src="#" alt="image" style="width: 100%; height: 100px" />
                 </div>
                 <div class="col-md-5">
-                    <h3>Product Name</h3>
-                    <p>Product description</p>
-                    <p>Product manufacturer</p>
-                    <p>Product Price</p>
+                    <h3>${product.productName}</h3>
+                    <p>${product.productDescription}</p>
+                    <p><strong>Manufacturer</strong>: ${product.productManufacturer}</p>
+                    <p><strong>Price</strong>: ${product.productPrice}</p>
+                    <p><strong>Category</strong>: ${product.productCategory}</p>
+                    <p><strong>Status</strong>: ${product.productStatus}</p>
                 </div>
             </div>
 
