@@ -1,9 +1,8 @@
 package com.musicstore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
 
 //One Object instance corresponding to a row in table
 @Entity
@@ -20,6 +19,9 @@ public class Product {
     private String productStatus;
     private String productManufacturer;
     private int unitInStock;
+
+    @Transient
+    private MultipartFile productImage;
 
     public String getProductId() {
         return productId;
@@ -91,5 +93,14 @@ public class Product {
 
     public void setUnitInStock(int unitInStock) {
         this.unitInStock = unitInStock;
+    }
+
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
     }
 }

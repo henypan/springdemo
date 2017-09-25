@@ -4,3 +4,4 @@ musicstore.iml
 out/
 target/
 *.class
+/src/main/webapp/WEB-INF/resources/images/
